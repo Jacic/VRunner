@@ -1,0 +1,70 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Levels/PlayScene.gd" type="Script" id=1]
+[ext_resource path="res://fonts/SpaceMono-Bold.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Objects/KillZone.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Objects/Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://art/background.png" type="Texture" id=5]
+[ext_resource path="res://audio/bgm.ogg" type="AudioStream" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+size = 24
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[node name="PlayScene" type="Node2D"]
+script = ExtResource( 1 )
+baseScrollSpeed = 200
+
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( -8, 0 )
+scale = Vector2( 30.0625, 17.0625 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Camera" type="Camera2D" parent="."]
+position = Vector2( 0, 4 )
+anchor_mode = 0
+current = true
+zoom = Vector2( 2, 2 )
+
+[node name="Player" parent="." instance=ExtResource( 4 )]
+position = Vector2( 144, 640 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ScoreLabel" type="Label" parent="CanvasLayer"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -56.0
+margin_right = 56.0
+margin_bottom = 36.0
+grow_horizontal = 2
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 0, 1 )
+text = "SCORE: 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="KillZone" parent="." instance=ExtResource( 3 )]
+position = Vector2( -104, 448 )
+z_index = 5
+
+[node name="KillZoneTop" parent="." instance=ExtResource( 3 )]
+position = Vector2( 768, -184 )
+rotation = -3.14159
+
+[node name="KillZoneBottom" parent="." instance=ExtResource( 3 )]
+position = Vector2( 576, 1272 )
+rotation = 0.0
+
+[node name="ModulatePrev" type="Node2D" parent="."]
+
+[node name="ModulateCur" type="Node2D" parent="."]
+
+[node name="BGM" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+volume_db = -10.0
+[connection signal="died" from="Player" to="." method="_on_Player_died"]

@@ -1,0 +1,127 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Objects/Solid.tscn" type="PackedScene" id=1]
+[ext_resource path="res://LevelParts/Part.gd" type="Script" id=2]
+[ext_resource path="res://Objects/Spikes.tscn" type="PackedScene" id=4]
+
+
+
+[node name="Part" type="Node2D"]
+script = ExtResource( 2 )
+partWidth = 1664
+
+[node name="ModulatePrev" type="Node2D" parent="."]
+
+[node name="Spikes6" parent="ModulatePrev" instance=ExtResource( 4 )]
+position = Vector2( 256, 416 )
+rotation = -1.5708
+
+[node name="Spikes4" parent="ModulatePrev" instance=ExtResource( 4 )]
+position = Vector2( 256, 352 )
+rotation = -1.5708
+
+[node name="Spikes8" parent="ModulatePrev" instance=ExtResource( 4 )]
+position = Vector2( 448, 736 )
+rotation = -1.5708
+
+[node name="Spikes7" parent="ModulatePrev" instance=ExtResource( 4 )]
+position = Vector2( 448, 672 )
+rotation = -1.5708
+
+[node name="Spikes10" parent="ModulatePrev" instance=ExtResource( 4 )]
+position = Vector2( 640, 416 )
+rotation = -1.5708
+
+[node name="Spikes9" parent="ModulatePrev" instance=ExtResource( 4 )]
+position = Vector2( 640, 352 )
+rotation = -1.5708
+
+[node name="Spikes12" parent="ModulatePrev" instance=ExtResource( 4 )]
+position = Vector2( 832, 736 )
+rotation = -1.5708
+
+[node name="Spikes11" parent="ModulatePrev" instance=ExtResource( 4 )]
+position = Vector2( 832, 672 )
+rotation = -1.5708
+
+[node name="Spikes14" parent="ModulatePrev" instance=ExtResource( 4 )]
+position = Vector2( 1120, 416 )
+rotation = -1.5708
+
+[node name="Spikes13" parent="ModulatePrev" instance=ExtResource( 4 )]
+position = Vector2( 1120, 352 )
+rotation = -1.5708
+
+[node name="Spikes16" parent="ModulatePrev" instance=ExtResource( 4 )]
+position = Vector2( 1120, 544 )
+rotation = -1.5708
+
+[node name="Spikes15" parent="ModulatePrev" instance=ExtResource( 4 )]
+position = Vector2( 1120, 480 )
+rotation = -1.5708
+
+[node name="Spikes18" parent="ModulatePrev" instance=ExtResource( 4 )]
+position = Vector2( 1120, 672 )
+rotation = -1.5708
+
+[node name="Spikes17" parent="ModulatePrev" instance=ExtResource( 4 )]
+position = Vector2( 1120, 608 )
+rotation = -1.5708
+
+[node name="Spikes24" parent="ModulatePrev" instance=ExtResource( 4 )]
+position = Vector2( 1440, 480 )
+rotation = -1.5708
+
+[node name="Spikes23" parent="ModulatePrev" instance=ExtResource( 4 )]
+position = Vector2( 1440, 416 )
+rotation = -1.5708
+
+[node name="Spikes22" parent="ModulatePrev" instance=ExtResource( 4 )]
+position = Vector2( 1440, 608 )
+rotation = -1.5708
+
+[node name="Spikes21" parent="ModulatePrev" instance=ExtResource( 4 )]
+position = Vector2( 1440, 544 )
+rotation = -1.5708
+
+[node name="Spikes20" parent="ModulatePrev" instance=ExtResource( 4 )]
+position = Vector2( 1440, 736 )
+rotation = -1.5708
+
+[node name="Spikes19" parent="ModulatePrev" instance=ExtResource( 4 )]
+position = Vector2( 1440, 672 )
+rotation = -1.5708
+
+[node name="ModulateCur" type="Node2D" parent="."]
+
+[node name="Solid6" parent="ModulateCur" instance=ExtResource( 1 )]
+position = Vector2( 832, 288 )
+scale = Vector2( 26, 1 )
+
+[node name="Solid7" parent="ModulateCur" instance=ExtResource( 1 )]
+position = Vector2( 256, 384 )
+scale = Vector2( 1, 2 )
+
+[node name="Solid8" parent="ModulateCur" instance=ExtResource( 1 )]
+position = Vector2( 448, 704 )
+scale = Vector2( 1, 2 )
+
+[node name="Solid9" parent="ModulateCur" instance=ExtResource( 1 )]
+position = Vector2( 640, 384 )
+scale = Vector2( 1, 2 )
+
+[node name="Solid10" parent="ModulateCur" instance=ExtResource( 1 )]
+position = Vector2( 832, 704 )
+scale = Vector2( 1, 2 )
+
+[node name="Solid11" parent="ModulateCur" instance=ExtResource( 1 )]
+position = Vector2( 1120, 512 )
+scale = Vector2( 1, 6 )
+
+[node name="Solid12" parent="ModulateCur" instance=ExtResource( 1 )]
+position = Vector2( 1440, 576 )
+scale = Vector2( 1, 6 )
+
+[node name="Solid5" parent="ModulateCur" instance=ExtResource( 1 )]
+position = Vector2( 832, 800 )
+scale = Vector2( 26, 1 )

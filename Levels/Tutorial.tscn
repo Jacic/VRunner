@@ -1,0 +1,419 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://audio/bgm.ogg" type="AudioStream" id=1]
+[ext_resource path="res://Levels/PlayScene.gd" type="Script" id=2]
+[ext_resource path="res://Objects/Cannon.tscn" type="PackedScene" id=3]
+[ext_resource path="res://art/background.png" type="Texture" id=4]
+[ext_resource path="res://Objects/Solid.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Objects/Player.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Objects/Spikes.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Objects/Saw.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Objects/Bonus.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Objects/KillZone.tscn" type="PackedScene" id=10]
+[ext_resource path="res://fonts/SpaceMono-Bold.ttf" type="DynamicFontData" id=11]
+
+[sub_resource type="DynamicFont" id=1]
+size = 24
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 11 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 48
+font_data = ExtResource( 11 )
+
+[node name="Tutorial" type="Node2D"]
+script = ExtResource( 2 )
+tutorial = true
+
+[node name="Background" type="Sprite" parent="."]
+scale = Vector2( 30, 17 )
+texture = ExtResource( 4 )
+centered = false
+
+[node name="Player" parent="." instance=ExtResource( 6 )]
+position = Vector2( 208, 1024 )
+
+[node name="ModulatePrev" type="Node2D" parent="."]
+
+[node name="Spikes" parent="ModulatePrev" instance=ExtResource( 7 )]
+position = Vector2( 1376, 1056 )
+
+[node name="Spikes2" parent="ModulatePrev" instance=ExtResource( 7 )]
+position = Vector2( 1440, 1056 )
+
+[node name="Spikes4" parent="ModulatePrev" instance=ExtResource( 7 )]
+position = Vector2( 1824, 32 )
+rotation = 3.14159
+
+[node name="Spikes3" parent="ModulatePrev" instance=ExtResource( 7 )]
+position = Vector2( 1888, 32 )
+rotation = 3.14159
+
+[node name="Spikes5" parent="ModulatePrev" instance=ExtResource( 7 )]
+position = Vector2( 2656, 736 )
+rotation = -1.5708
+
+[node name="Spikes6" parent="ModulatePrev" instance=ExtResource( 7 )]
+position = Vector2( 2656, 672 )
+rotation = -1.5708
+
+[node name="Spikes8" parent="ModulatePrev" instance=ExtResource( 7 )]
+position = Vector2( 2656, 608 )
+rotation = -1.5708
+
+[node name="Spikes7" parent="ModulatePrev" instance=ExtResource( 7 )]
+position = Vector2( 2656, 544 )
+rotation = -1.5708
+
+[node name="Spikes10" parent="ModulatePrev" instance=ExtResource( 7 )]
+position = Vector2( 2656, 480 )
+rotation = -1.5708
+
+[node name="Spikes9" parent="ModulatePrev" instance=ExtResource( 7 )]
+position = Vector2( 2656, 416 )
+rotation = -1.5708
+
+[node name="Spikes11" parent="ModulatePrev" instance=ExtResource( 7 )]
+position = Vector2( 2656, 352 )
+rotation = -1.5708
+
+[node name="Spikes12" parent="ModulatePrev" instance=ExtResource( 7 )]
+position = Vector2( 4000, 1056 )
+
+[node name="Spikes13" parent="ModulatePrev" instance=ExtResource( 7 )]
+position = Vector2( 4000, 32 )
+rotation = 3.14159
+
+[node name="Saw" parent="ModulatePrev" instance=ExtResource( 8 )]
+position = Vector2( 3456, 960 )
+
+[node name="Saw3" parent="ModulatePrev" instance=ExtResource( 8 )]
+position = Vector2( 5248, 544 )
+
+[node name="Saw4" parent="ModulatePrev" instance=ExtResource( 8 )]
+position = Vector2( 5344, 448 )
+
+[node name="Saw5" parent="ModulatePrev" instance=ExtResource( 8 )]
+position = Vector2( 5344, 640 )
+
+[node name="Saw2" parent="ModulatePrev" instance=ExtResource( 8 )]
+position = Vector2( 3456, 128 )
+
+[node name="Cannon" parent="ModulatePrev" instance=ExtResource( 3 )]
+position = Vector2( 11048, 96 )
+rotation = 3.14159
+
+[node name="ModulateCur" type="Node2D" parent="."]
+
+[node name="Solid" parent="ModulateCur" instance=ExtResource( 5 )]
+position = Vector2( 3200, 1056 )
+scale = Vector2( 100, 1 )
+
+[node name="Solid2" parent="ModulateCur" instance=ExtResource( 5 )]
+position = Vector2( 3200, 32 )
+scale = Vector2( 100, 1 )
+
+[node name="Solid3" parent="ModulateCur" instance=ExtResource( 5 )]
+position = Vector2( 3264, 800 )
+scale = Vector2( 20, 1 )
+
+[node name="Solid4" parent="ModulateCur" instance=ExtResource( 5 )]
+position = Vector2( 3264, 288 )
+scale = Vector2( 20, 1 )
+
+[node name="Solid23" parent="ModulateCur" instance=ExtResource( 5 )]
+position = Vector2( 2656, 544 )
+scale = Vector2( 1, 7 )
+
+[node name="Solid5" parent="ModulateCur" instance=ExtResource( 5 )]
+position = Vector2( 4544, 544 )
+scale = Vector2( 20, 1 )
+
+[node name="Solid6" parent="ModulateCur" instance=ExtResource( 5 )]
+position = Vector2( 6720, 1056 )
+scale = Vector2( 10, 1 )
+
+[node name="Solid7" parent="ModulateCur" instance=ExtResource( 5 )]
+position = Vector2( 7232, 32 )
+scale = Vector2( 10, 1 )
+
+[node name="Solid8" parent="ModulateCur" instance=ExtResource( 5 )]
+position = Vector2( 7872, 608 )
+scale = Vector2( 10, 1 )
+
+[node name="Solid9" parent="ModulateCur" instance=ExtResource( 5 )]
+position = Vector2( 8352, 864 )
+scale = Vector2( 5, 1 )
+
+[node name="Solid10" parent="ModulateCur" instance=ExtResource( 5 )]
+position = Vector2( 8672, 1056 )
+scale = Vector2( 5, 1 )
+
+[node name="Solid11" parent="ModulateCur" instance=ExtResource( 5 )]
+position = Vector2( 8992, 800 )
+scale = Vector2( 5, 1 )
+
+[node name="Solid12" parent="ModulateCur" instance=ExtResource( 5 )]
+position = Vector2( 10112, 32 )
+scale = Vector2( 30, 1 )
+
+[node name="Solid13" parent="ModulateCur" instance=ExtResource( 5 )]
+position = Vector2( 11072, 544 )
+scale = Vector2( 18, 1 )
+
+[node name="Solid14" parent="ModulateCur" instance=ExtResource( 5 )]
+position = Vector2( 11616, 384 )
+rotation = 1.5708
+scale = Vector2( 4, 1 )
+
+[node name="Solid16" parent="ModulateCur" instance=ExtResource( 5 )]
+position = Vector2( 11696, 32 )
+scale = Vector2( 3.5, 1 )
+
+[node name="Solid17" parent="ModulateCur" instance=ExtResource( 5 )]
+position = Vector2( 12320, 800 )
+scale = Vector2( 16, 1 )
+
+[node name="Solid20" parent="ModulateCur" instance=ExtResource( 5 )]
+position = Vector2( 13056, 32 )
+scale = Vector2( 20, 1 )
+
+[node name="Solid22" parent="ModulateCur" instance=ExtResource( 5 )]
+position = Vector2( 13728, 256 )
+rotation = 1.5708
+scale = Vector2( 8, 1 )
+
+[node name="Solid21" parent="ModulateCur" instance=ExtResource( 5 )]
+position = Vector2( 14208, 640 )
+scale = Vector2( 16, 1 )
+
+[node name="Solid19" parent="ModulateCur" instance=ExtResource( 5 )]
+position = Vector2( 16320, 544 )
+scale = Vector2( 20, 1 )
+
+[node name="Solid18" parent="ModulateCur" instance=ExtResource( 5 )]
+position = Vector2( 15168, 32 )
+scale = Vector2( 16, 1 )
+
+[node name="Solid15" parent="ModulateCur" instance=ExtResource( 5 )]
+position = Vector2( 11840, 288 )
+rotation = 1.5708
+scale = Vector2( 9, 1 )
+
+[node name="Camera" type="Camera2D" parent="."]
+position = Vector2( 0, 4 )
+anchor_mode = 0
+current = true
+zoom = Vector2( 2, 2 )
+
+[node name="Bonus" parent="." instance=ExtResource( 9 )]
+position = Vector2( 15656, 96 )
+
+[node name="Bonus2" parent="." instance=ExtResource( 9 )]
+position = Vector2( 15600, 96 )
+
+[node name="Bonus3" parent="." instance=ExtResource( 9 )]
+position = Vector2( 15712, 216 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ScoreLabel" type="Label" parent="CanvasLayer"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -56.0
+margin_right = 125.0
+margin_bottom = 36.0
+grow_horizontal = 2
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 0, 1 )
+text = "SCORE: 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 432.0
+margin_top = 312.0
+margin_right = 1148.0
+margin_bottom = 366.0
+custom_fonts/font = SubResource( 2 )
+text = "Welcome to VRunner!"
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 5424.0
+margin_top = 440.0
+margin_right = 6140.0
+margin_bottom = 665.0
+custom_fonts/font = SubResource( 2 )
+text = "Your goal is to get the highest score possible by surviving as long as you can"
+autowrap = true
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label5" type="Label" parent="."]
+margin_left = 6832.0
+margin_top = 552.0
+margin_right = 7440.0
+margin_bottom = 777.0
+custom_fonts/font = SubResource( 2 )
+text = "Avoid falling out of the level!"
+autowrap = true
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label6" type="Label" parent="."]
+margin_left = 8088.0
+margin_top = 232.0
+margin_right = 9128.0
+margin_bottom = 457.0
+custom_fonts/font = SubResource( 2 )
+text = "Sometimes you'll need to drop onto platforms instead of flipping gravity"
+autowrap = true
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label7" type="Label" parent="."]
+margin_left = 9952.0
+margin_top = 328.0
+margin_right = 10992.0
+margin_bottom = 553.0
+custom_fonts/font = SubResource( 2 )
+text = "These cannons will fire missiles at you. Avoid them!"
+autowrap = true
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label8" type="Label" parent="."]
+margin_left = 11320.0
+margin_top = 624.0
+margin_right = 11816.0
+margin_bottom = 849.0
+custom_fonts/font = SubResource( 2 )
+text = "Don't flip too
+early here!"
+autowrap = true
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label10" type="Label" parent="."]
+margin_left = 12808.0
+margin_top = 368.0
+margin_right = 13696.0
+margin_bottom = 552.0
+custom_fonts/font = SubResource( 2 )
+text = "If you get pushed into the spikes at the left of the screen, your run will end"
+autowrap = true
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label11" type="Label" parent="."]
+margin_left = 13696.0
+margin_top = 672.0
+margin_right = 14816.0
+margin_bottom = 897.0
+custom_fonts/font = SubResource( 2 )
+text = "But you'll slowly recover your position after being pushed"
+autowrap = true
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label9" type="Label" parent="."]
+margin_left = 15744.0
+margin_top = 64.0
+margin_right = 16400.0
+margin_bottom = 289.0
+custom_fonts/font = SubResource( 2 )
+text = "Collect these for bonus points!"
+autowrap = true
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label12" type="Label" parent="."]
+margin_left = 16960.0
+margin_top = 360.0
+margin_right = 17916.0
+margin_bottom = 464.0
+custom_fonts/font = SubResource( 2 )
+text = "That's all you need to know!"
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label13" type="Label" parent="."]
+margin_left = 17920.0
+margin_top = 544.0
+margin_right = 18876.0
+margin_bottom = 648.0
+custom_fonts/font = SubResource( 2 )
+text = "Good luck!"
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 984.0
+margin_top = 648.0
+margin_right = 1904.0
+margin_bottom = 816.0
+custom_fonts/font = SubResource( 2 )
+text = "Press SPACE to flip gravity when on the ground
+
+Avoid the spikes!"
+autowrap = true
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="."]
+margin_left = 2840.0
+margin_top = 456.0
+margin_right = 3760.0
+margin_bottom = 624.0
+custom_fonts/font = SubResource( 2 )
+text = "Spikes, saws, and anything dangerous-looking will hurt you and end your run"
+autowrap = true
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="KillZone" parent="." instance=ExtResource( 10 )]
+position = Vector2( -104, 448 )
+z_index = 5
+
+[node name="KillZoneTop" parent="." instance=ExtResource( 10 )]
+position = Vector2( 768, -184 )
+rotation = -3.14159
+
+[node name="KillZoneBottom" parent="." instance=ExtResource( 10 )]
+position = Vector2( 576, 1272 )
+rotation = 0.0
+
+[node name="BGM" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+volume_db = -10.0
+[connection signal="died" from="Player" to="." method="_on_Player_died"]

@@ -1,0 +1,73 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Objects/Solid.tscn" type="PackedScene" id=1]
+[ext_resource path="res://LevelParts/Part.gd" type="Script" id=2]
+[ext_resource path="res://Objects/Bonus.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Objects/Saw.tscn" type="PackedScene" id=4]
+
+[node name="Part" type="Node2D"]
+script = ExtResource( 2 )
+partWidth = 2048
+
+[node name="ModulatePrev" type="Node2D" parent="."]
+
+[node name="Saw3" parent="ModulatePrev" instance=ExtResource( 4 )]
+position = Vector2( 256, 768 )
+
+[node name="Saw4" parent="ModulatePrev" instance=ExtResource( 4 )]
+position = Vector2( 640, 320 )
+
+[node name="Saw5" parent="ModulatePrev" instance=ExtResource( 4 )]
+position = Vector2( 704, 448 )
+
+[node name="Saw6" parent="ModulatePrev" instance=ExtResource( 4 )]
+position = Vector2( 768, 576 )
+
+[node name="Saw7" parent="ModulatePrev" instance=ExtResource( 4 )]
+position = Vector2( 1216, 448 )
+
+[node name="Saw8" parent="ModulatePrev" instance=ExtResource( 4 )]
+position = Vector2( 1280, 576 )
+
+[node name="Saw15" parent="ModulatePrev" instance=ExtResource( 4 )]
+position = Vector2( 1856, 448 )
+
+[node name="Saw14" parent="ModulatePrev" instance=ExtResource( 4 )]
+position = Vector2( 1920, 576 )
+
+[node name="Saw9" parent="ModulatePrev" instance=ExtResource( 4 )]
+position = Vector2( 1536, 640 )
+
+[node name="Saw10" parent="ModulatePrev" instance=ExtResource( 4 )]
+position = Vector2( 1600, 512 )
+
+[node name="Saw12" parent="ModulatePrev" instance=ExtResource( 4 )]
+position = Vector2( 1664, 640 )
+
+[node name="Saw11" parent="ModulatePrev" instance=ExtResource( 4 )]
+position = Vector2( 1344, 448 )
+
+[node name="Saw13" parent="ModulatePrev" instance=ExtResource( 4 )]
+position = Vector2( 1984, 448 )
+
+[node name="Bonus" parent="ModulatePrev" instance=ExtResource( 3 )]
+position = Vector2( 1600, 416 )
+spawnChance = 0.5
+
+[node name="ModulateCur" type="Node2D" parent="."]
+
+[node name="Solid" parent="ModulateCur" instance=ExtResource( 1 )]
+position = Vector2( 512, 800 )
+scale = Vector2( 16, 1 )
+
+[node name="Solid2" parent="ModulateCur" instance=ExtResource( 1 )]
+position = Vector2( 512, 288 )
+scale = Vector2( 16, 1 )
+
+[node name="Solid4" parent="ModulateCur" instance=ExtResource( 1 )]
+position = Vector2( 1536, 736 )
+scale = Vector2( 16, 1 )
+
+[node name="Solid3" parent="ModulateCur" instance=ExtResource( 1 )]
+position = Vector2( 1536, 352 )
+scale = Vector2( 16, 1 )

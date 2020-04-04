@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Objects/Solid.tscn" type="PackedScene" id=1]
+[ext_resource path="res://LevelParts/Part.gd" type="Script" id=2]
+[ext_resource path="res://Objects/Bonus.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Objects/Spikes.tscn" type="PackedScene" id=5]
+
+[node name="Part" type="Node2D"]
+script = ExtResource( 2 )
+partWidth = 896
+
+[node name="ModulatePrev" type="Node2D" parent="."]
+
+[node name="Spikes" parent="ModulatePrev" instance=ExtResource( 5 )]
+position = Vector2( 288, 928 )
+
+[node name="Spikes2" parent="ModulatePrev" instance=ExtResource( 5 )]
+position = Vector2( 288, 160 )
+rotation = 3.14159
+
+[node name="Spikes4" parent="ModulatePrev" instance=ExtResource( 5 )]
+position = Vector2( 608, 928 )
+
+[node name="Spikes3" parent="ModulatePrev" instance=ExtResource( 5 )]
+position = Vector2( 608, 160 )
+rotation = 3.14159
+
+[node name="Bonus" parent="ModulatePrev" instance=ExtResource( 3 )]
+position = Vector2( 336, 848 )
+spawnChance = 0.2
+
+[node name="ModulateCur" type="Node2D" parent="."]
+
+[node name="Solid5" parent="ModulateCur" instance=ExtResource( 1 )]
+position = Vector2( 448, 160 )
+scale = Vector2( 14, 1 )
+
+[node name="Solid4" parent="ModulateCur" instance=ExtResource( 1 )]
+position = Vector2( 448, 928 )
+scale = Vector2( 14, 1 )
